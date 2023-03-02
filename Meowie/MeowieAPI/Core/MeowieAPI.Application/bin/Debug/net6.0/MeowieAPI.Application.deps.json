@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MeowieAPI.Application/1.0.0": {
+        "dependencies": {
+          "MeowieAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MeowieAPI.Application.dll": {}
+        }
+      },
+      "MeowieAPI.Domain/1.0.0": {
+        "runtime": {
+          "MeowieAPI.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MeowieAPI.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MeowieAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

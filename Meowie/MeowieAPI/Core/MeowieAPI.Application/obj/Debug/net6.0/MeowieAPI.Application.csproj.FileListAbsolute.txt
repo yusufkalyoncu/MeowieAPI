@@ -1,0 +1,15 @@
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\bin\Debug\net6.0\MeowieAPI.Application.deps.json
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\bin\Debug\net6.0\MeowieAPI.Application.dll
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\bin\Debug\net6.0\MeowieAPI.Application.pdb
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\bin\Debug\net6.0\MeowieAPI.Domain.dll
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\bin\Debug\net6.0\MeowieAPI.Domain.pdb
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\obj\Debug\net6.0\MeowieAPI.Application.csproj.AssemblyReference.cache
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\obj\Debug\net6.0\MeowieAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\obj\Debug\net6.0\MeowieAPI.Application.AssemblyInfoInputs.cache
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\obj\Debug\net6.0\MeowieAPI.Application.AssemblyInfo.cs
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\obj\Debug\net6.0\MeowieAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\obj\Debug\net6.0\MeowieAPI.Application.csproj.CopyComplete
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\obj\Debug\net6.0\MeowieAPI.Application.dll
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\obj\Debug\net6.0\refint\MeowieAPI.Application.dll
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\obj\Debug\net6.0\MeowieAPI.Application.pdb
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Core\MeowieAPI.Application\obj\Debug\net6.0\ref\MeowieAPI.Application.dll
