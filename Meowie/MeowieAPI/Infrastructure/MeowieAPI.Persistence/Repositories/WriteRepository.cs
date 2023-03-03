@@ -4,37 +4,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MeowieAPI.Application.Repositories;
+using MeowieAPI.Domain.Entities.Common;
+using MeowieAPI.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace MeowieAPI.Persistence.Repositories
 {
-    public class WriteRepository<T> : IWriteRepository<T> where T : class
+    public class WriteRepository<T> : IWriteRepository<T> where T : BaseEntity
     {
-        public DbSet<T> Table => throw new NotImplementedException();
+        readonly private MeowieAPIDbContext _context;
 
-        public Task<bool> AddAsync(T model)
+        public WriteRepository(MeowieAPIDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<bool> AddAsync(List<T> model)
+        public DbSet<T> Table => _context.Set<T>();
+
+        public async Task<bool> AddAsync(T model)
         {
-            throw new NotImplementedException();
+            EntityEntry<T> entityEntry = await Table.AddAsync(model);
+            return entityEntry.State == EntityState.Added;
         }
 
-        public Task<bool> Remove(T model)
+        public async Task<bool> AddRangeAsync(List<T> datas)
         {
-            throw new NotImplementedException();
+            await Table.AddRangeAsync(datas);
+            return true;
         }
 
-        public Task<bool> Remove(string id)
+        public bool Remove(T model)
         {
-            throw new NotImplementedException();
+            EntityEntry entityEntry = Table.Remove(model);
+            return entityEntry.State == EntityState.Deleted;
         }
 
-        public Task<bool> UpdateAsync(T model)
+        public async Task<bool> RemoveAsync(string id)
         {
-            throw new NotImplementedException();
+            T model = await Table.FirstOrDefaultAsync(data => data.Id == Guid.Parse(id));
+            return Remove(model);
         }
+        public bool RemoveRange(List<T> datas)
+        {
+            Table.RemoveRange(datas);
+            return true;
+        }
+
+        public bool Update(T model)
+        {
+            EntityEntry entityEntry = Table.Update(model);
+            return entityEntry.State == EntityState.Modified;
+        }
+
+        public async Task<int> SaveAsync()
+        {
+            return await _context.SaveChangesAsync();
+        }
+
+        
     }
 }

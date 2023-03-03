@@ -389,7 +389,8 @@
       },
       "MeowieAPI.Application/1.0.0": {
         "dependencies": {
-          "MeowieAPI.Domain": "1.0.0"
+          "MeowieAPI.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.3"
         },
         "runtime": {
           "MeowieAPI.Application.dll": {}
