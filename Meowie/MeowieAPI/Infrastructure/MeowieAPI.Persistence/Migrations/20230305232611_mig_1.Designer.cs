@@ -13,7 +13,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MeowieAPI.Persistence.Migrations
 {
     [DbContext(typeof(MeowieAPIDbContext))]
-    [Migration("20230302172728_mig_1")]
+    [Migration("20230305232611_mig_1")]
     partial class mig_1
     {
         /// <inheritdoc />
@@ -123,9 +123,8 @@ namespace MeowieAPI.Persistence.Migrations
                     b.Property<Guid>("DirectorId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Duration")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<TimeSpan>("Duration")
+                        .HasColumnType("interval");
 
                     b.Property<List<string>>("Genres")
                         .IsRequired()

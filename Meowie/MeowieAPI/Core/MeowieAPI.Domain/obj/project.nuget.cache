@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EVWuH+tAMjKh53rOFyAcaCJQbjqol6qtEthSe//nXnomQxwB+Jx6ttyel27zfyzafLYu0BSo37b4zKwnGDeXdg==",
+  "dgSpecHash": "mXwIxsbQA/A0yS829mM8GA7KdcyB1RULqxAP/V/f1mFCcqbWnEd+T1HxyMrLkPrgq9cY9mHkk2WlvUuth7wMrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Yusuf\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

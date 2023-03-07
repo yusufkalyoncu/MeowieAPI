@@ -61,3 +61,5 @@ C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Presentation\MeowieAPI.API\obj\Debug\net
 C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Presentation\MeowieAPI.API\obj\Debug\net6.0\MeowieAPI.API.pdb
 C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Presentation\MeowieAPI.API\obj\Debug\net6.0\MeowieAPI.API.genruntimeconfig.cache
 C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Presentation\MeowieAPI.API\obj\Debug\net6.0\ref\MeowieAPI.API.dll
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Presentation\MeowieAPI.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Yusuf\Desktop\Meowie\MeowieAPI\Presentation\MeowieAPI.API\bin\Debug\net6.0\MeowieAPI.API.staticwebassets.runtime.json

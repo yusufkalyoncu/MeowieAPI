@@ -14,6 +14,8 @@ using MeowieAPI.Persistence.Contexts;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using MeowieAPI.Persistence.Services;
+using MeowieAPI.Application.Abstractions.ImdbService;
 
 namespace MeowieAPI.Persistence
 {
@@ -40,6 +42,8 @@ namespace MeowieAPI.Persistence
 
             services.AddScoped<IUserReadRepository, UserReadRepository>();
             services.AddScoped<IUserWriteRepository, UserWriteRepository>();
+
+            services.AddScoped<IImdbService, ImdbService>();
         }
     }
 }

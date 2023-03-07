@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hGhj0GsiG8t8DIXHWGqKoY3IbNLAuVC7XQhK23frD0XUQckhKZBq3LRnJNdr3EEz23rsQ1JT0XWxTd1D4MY2cg==",
+  "dgSpecHash": "J5TV1WC7zLznufCK/tvsYWfUd4aRvKnSJfaXe+QD/3D1CbobZmbaOED0b19uAXyUS0Q0y6rWBX8hvNF0qzq0yg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Yusuf\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.3\\microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.3\\microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.3\\microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
@@ -15,6 +16,8 @@
     "C:\\Users\\Yusuf\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Yusuf\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\Yusuf\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

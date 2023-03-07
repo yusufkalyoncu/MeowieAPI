@@ -120,9 +120,8 @@ namespace MeowieAPI.Persistence.Migrations
                     b.Property<Guid>("DirectorId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Duration")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<TimeSpan>("Duration")
+                        .HasColumnType("interval");
 
                     b.Property<List<string>>("Genres")
                         .IsRequired()

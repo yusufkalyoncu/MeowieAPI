@@ -70,7 +70,7 @@ namespace MeowieAPI.Persistence.Migrations
                     Description = table.Column<string>(type: "text", nullable: false),
                     UserRating = table.Column<float>(type: "real", nullable: false),
                     ImdbRating = table.Column<float>(type: "real", nullable: false),
-                    Duration = table.Column<string>(type: "text", nullable: false),
+                    Duration = table.Column<TimeSpan>(type: "interval", nullable: false),
                     ImageURL = table.Column<string>(type: "text", nullable: false),
                     DirectorId = table.Column<Guid>(type: "uuid", nullable: false)
                 },

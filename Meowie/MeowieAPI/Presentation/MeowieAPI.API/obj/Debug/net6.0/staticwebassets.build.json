@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "Jp7hh5snhVxDSy6FEtHprXzMldXzlem9+3iWKGGaQ4Y=",
+  "Hash": "lKY0XZ7+gWoAkKlcQC6NqczDxA761l+aAa8hby/GSJc=",
   "Source": "MeowieAPI.API",
   "BasePath": "_content/MeowieAPI.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MeowieAPI.API\\wwwroot",
+      "Source": "MeowieAPI.API",
+      "ContentRoot": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Presentation\\MeowieAPI.API\\wwwroot\\",
+      "BasePath": "_content/MeowieAPI.API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

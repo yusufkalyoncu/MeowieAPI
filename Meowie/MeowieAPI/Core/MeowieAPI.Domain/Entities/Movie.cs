@@ -15,7 +15,7 @@ namespace MeowieAPI.Domain.Entities
         public string Description { get; set; }
         public float UserRating { get; set; }
         public float ImdbRating { get; set; }
-        public string Duration { get; set; }
+        public TimeSpan Duration { get; set; }
         public string ImageURL { get; set; }
         public Director Director { get; set; }
         public Guid DirectorId { get; set; }
