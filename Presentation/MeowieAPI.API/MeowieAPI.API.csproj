@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net70</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="imdb.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="imdb.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\MeowieAPI.Application\MeowieAPI.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\MeowieAPI.Infrastructure\MeowieAPI.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\MeowieAPI.Persistence\MeowieAPI.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\resource\profile-pictures\" />
+  </ItemGroup>
+
+</Project>
