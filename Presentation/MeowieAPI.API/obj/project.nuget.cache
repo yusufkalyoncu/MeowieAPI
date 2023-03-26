@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WJ8KDhFvAmMLfHxAbWT7NoJQCfpZxfqu1cWlSvO0raKfzbZyhxaJpnW6VecQxI5gOi4Uv1O0nt8MhkbHMHYuMQ==",
+  "dgSpecHash": "WEzO8hd3WRrzS9WH9grhLU1P1VmCqgK7OIY4B2DbuDfwwrUHjMpt3fXJSgcZurp/jXAl+IFr4hg8XQbqHsx6CQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Presentation\\MeowieAPI.API\\MeowieAPI.API.csproj",
+  "projectFilePath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Presentation\\MeowieAPI.API\\MeowieAPI.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yusuf\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

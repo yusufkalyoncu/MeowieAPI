@@ -2329,11 +2329,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj",
       "projectName": "MeowieAPI.Infrastructure",
-      "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Yusuf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
@@ -2357,8 +2357,8 @@
         "net7.0": {
           "targetAlias": "net70",
           "projectReferences": {
-            "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj": {
-              "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj"
+            "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj": {
+              "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj"
             }
           }
         }

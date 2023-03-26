@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iYASxTlTUN7jJ6m8gco5ks39hKZ0bo8MrB0vwEM6D8uSO146jLVOk3RtddVgWhe+BIuYdoZFWIYwvI/y7F5HfA==",
+  "dgSpecHash": "Jivg+klZ32JT5xoEjoy7xys4HgAlRsGr3aoZyc5GJfhz76IG5qb9NvLBCipNCf0JcjEmw6fvsOHHoXJJOOMNgw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yusuf\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

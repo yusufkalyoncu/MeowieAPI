@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Presentation\\MeowieAPI.API\\MeowieAPI.API.csproj": {}
+    "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Presentation\\MeowieAPI.API\\MeowieAPI.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj": {
+    "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj",
         "projectName": "MeowieAPI.Application",
-        "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj",
+        "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj",
         "packagesPath": "C:\\Users\\Yusuf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\obj\\",
+        "outputPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
@@ -35,8 +35,8 @@
           "net7.0": {
             "targetAlias": "net70",
             "projectReferences": {
-              "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj"
+              "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj"
               }
             }
           }
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj": {
+    "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj",
         "projectName": "MeowieAPI.Domain",
-        "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj",
+        "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Domain\\MeowieAPI.Domain.csproj",
         "packagesPath": "C:\\Users\\Yusuf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
@@ -164,14 +164,14 @@
         }
       }
     },
-    "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj": {
+    "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj",
         "projectName": "MeowieAPI.Infrastructure",
-        "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Yusuf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
@@ -195,8 +195,8 @@
           "net7.0": {
             "targetAlias": "net70",
             "projectReferences": {
-              "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj"
+              "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj"
               }
             }
           }
@@ -239,14 +239,14 @@
         }
       }
     },
-    "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\MeowieAPI.Persistence.csproj": {
+    "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\MeowieAPI.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\MeowieAPI.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\MeowieAPI.Persistence.csproj",
         "projectName": "MeowieAPI.Persistence",
-        "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\MeowieAPI.Persistence.csproj",
+        "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\MeowieAPI.Persistence.csproj",
         "packagesPath": "C:\\Users\\Yusuf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
@@ -270,8 +270,8 @@
           "net7.0": {
             "targetAlias": "net70",
             "projectReferences": {
-              "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj"
+              "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj"
               }
             }
           }
@@ -337,14 +337,14 @@
         }
       }
     },
-    "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Presentation\\MeowieAPI.API\\MeowieAPI.API.csproj": {
+    "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Presentation\\MeowieAPI.API\\MeowieAPI.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Presentation\\MeowieAPI.API\\MeowieAPI.API.csproj",
+        "projectUniqueName": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Presentation\\MeowieAPI.API\\MeowieAPI.API.csproj",
         "projectName": "MeowieAPI.API",
-        "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Presentation\\MeowieAPI.API\\MeowieAPI.API.csproj",
+        "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Presentation\\MeowieAPI.API\\MeowieAPI.API.csproj",
         "packagesPath": "C:\\Users\\Yusuf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Presentation\\MeowieAPI.API\\obj\\",
+        "outputPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Presentation\\MeowieAPI.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
@@ -368,14 +368,14 @@
           "net7.0": {
             "targetAlias": "net70",
             "projectReferences": {
-              "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj"
+              "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj"
               },
-              "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj"
+              "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Infrastructure\\MeowieAPI.Infrastructure.csproj"
               },
-              "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\MeowieAPI.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Meowie\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\MeowieAPI.Persistence.csproj"
+              "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\MeowieAPI.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Infrastructure\\MeowieAPI.Persistence\\MeowieAPI.Persistence.csproj"
               }
             }
           }
