@@ -4,6 +4,8 @@ using MeowieAPI.Application.Features.Queries.GetAllMovie;
 using MeowieAPI.Application.Features.Queries.GetMovieByGenre;
 using MeowieAPI.Application.Features.Queries.GetRandomMovie;
 using MeowieAPI.Application.Features.Queries.GetSingleMovie;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +13,7 @@ namespace MeowieAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class MoviesController : ControllerBase
     {
         readonly IMediator _mediator;

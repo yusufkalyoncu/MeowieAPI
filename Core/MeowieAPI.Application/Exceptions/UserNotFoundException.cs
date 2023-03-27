@@ -8,7 +8,7 @@ namespace MeowieAPI.Application.Exceptions
 {
     public class UserNotFoundException : Exception
     {
-        public UserNotFoundException()
+        public UserNotFoundException() : base("User not found!")
         {
         }
 

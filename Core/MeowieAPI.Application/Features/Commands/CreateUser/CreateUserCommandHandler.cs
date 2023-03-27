@@ -22,6 +22,7 @@ namespace MeowieAPI.Application.Features.Commands.CreateUser
                 Name = request.Name,
                 UserName = request.Username,
                 Email = request.Email,
+                ProfileImage = "test"
             },request.Password);
             if(result.Succeeded)
             {

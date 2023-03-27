@@ -24,7 +24,16 @@ namespace MeowieAPI.Persistence
         public static void AddPersistenceServices(this IServiceCollection services)
         {
             services.AddDbContext<MeowieAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString));
-            services.AddIdentity<User, Role>().AddEntityFrameworkStores<MeowieAPIDbContext>();
+            services.AddIdentity<User, Role>(
+                options =>
+                {
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequiredLength = 3;
+                    options.Password.RequireUppercase = false;
+                    options.Password.RequireLowercase = false;
+                    options.Password.RequireDigit = false;
+                    
+                }).AddEntityFrameworkStores<MeowieAPIDbContext>();
 
             services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 

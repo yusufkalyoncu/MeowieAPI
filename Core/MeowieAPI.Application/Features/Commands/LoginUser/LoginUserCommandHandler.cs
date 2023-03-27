@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MediatR;
+using MeowieAPI.Application.Abstractions.Token;
+using MeowieAPI.Application.DTO;
 using MeowieAPI.Application.Exceptions;
 using MeowieAPI.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
@@ -14,11 +16,15 @@ namespace MeowieAPI.Application.Features.Commands.LoginUser
     {
         readonly UserManager<User> _userManager;
         readonly SignInManager<User> _signInManager;
-
-        public LoginUserCommandHandler(UserManager<User> userManager, SignInManager<User> signInManager)
+        readonly ITokenHandler _tokenHandler;
+        public LoginUserCommandHandler(
+            UserManager<User> userManager,
+            SignInManager<User> signInManager,
+            ITokenHandler tokenHandler)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _tokenHandler = tokenHandler;
         }
 
         public async Task<LoginUserCommandResponse> Handle(LoginUserCommandRequest request, CancellationToken cancellationToken)
@@ -28,16 +34,20 @@ namespace MeowieAPI.Application.Features.Commands.LoginUser
                 user = await _userManager.FindByEmailAsync(request.UsernameOrEmail);
 
             if (user == null)
-                throw new UserNotFoundException("User not found");
+                throw new UserNotFoundException();
 
             SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
             if (result.Succeeded)
             {
-                return new();
+                TokenDTO token = _tokenHandler.CreateAccessToken(5);
+                return new()
+                {
+                    Token = token
+                };
             }
             else
             {
-                throw new UserNotFoundException("Username or Password is wrong");
+                throw new AuthenticationErrorException();
             }
 
 

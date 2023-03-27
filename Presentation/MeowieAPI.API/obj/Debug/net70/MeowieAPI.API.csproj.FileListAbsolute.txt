@@ -131,3 +131,10 @@ C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\obj\Debug\n
 C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\obj\Debug\net70\MeowieAPI.API.csproj.CopyComplete
 C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\obj\Debug\net70\MeowieAPI.API.genruntimeconfig.cache
 C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\obj\Debug\net70\ref\MeowieAPI.API.dll
+C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\bin\Debug\net70\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\bin\Debug\net70\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\bin\Debug\net70\Microsoft.IdentityModel.Logging.dll
+C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\bin\Debug\net70\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\bin\Debug\net70\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\bin\Debug\net70\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\bin\Debug\net70\System.IdentityModel.Tokens.Jwt.dll
