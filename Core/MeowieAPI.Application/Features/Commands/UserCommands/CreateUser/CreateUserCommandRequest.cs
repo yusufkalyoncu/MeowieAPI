@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace MeowieAPI.Application.Features.Commands.CreateUser
+namespace MeowieAPI.Application.Features.Commands.UserCommands.CreateUser
 {
     public class CreateUserCommandRequest : IRequest<CreateUserCommandResponse>
     {

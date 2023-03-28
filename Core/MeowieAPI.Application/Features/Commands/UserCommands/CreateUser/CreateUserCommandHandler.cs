@@ -3,7 +3,7 @@ using MeowieAPI.Application.Exceptions;
 using MeowieAPI.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 
-namespace MeowieAPI.Application.Features.Commands.CreateUser
+namespace MeowieAPI.Application.Features.Commands.UserCommands.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest, CreateUserCommandResponse>
     {
@@ -23,8 +23,8 @@ namespace MeowieAPI.Application.Features.Commands.CreateUser
                 UserName = request.Username,
                 Email = request.Email,
                 ProfileImage = "test"
-            },request.Password);
-            if(result.Succeeded)
+            }, request.Password);
+            if (result.Succeeded)
             {
                 return new() { Succeeded = true, Message = "User created successfully" };
             }

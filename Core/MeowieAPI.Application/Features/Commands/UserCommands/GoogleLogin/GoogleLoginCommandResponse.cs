@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using MeowieAPI.Application.DTO;
 
-namespace MeowieAPI.Application.Features.Commands.LoginUser
+namespace MeowieAPI.Application.Features.Commands.UserCommands.GoogleLogin
 {
-    public class LoginUserCommandResponse
+    public class GoogleLoginCommandResponse
     {
         public TokenDTO Token { get; set; }
     }

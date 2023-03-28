@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace MeowieAPI.Application.Features.Commands.LoginUser
+namespace MeowieAPI.Application.Features.Commands.UserCommands.LoginUser
 {
     public class LoginUserCommandRequest : IRequest<LoginUserCommandResponse>
     {

@@ -10,7 +10,7 @@ using MeowieAPI.Application.Exceptions;
 using MeowieAPI.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 
-namespace MeowieAPI.Application.Features.Commands.LoginUser
+namespace MeowieAPI.Application.Features.Commands.UserCommands.LoginUser
 {
     public class LoginUserCommandHandler : IRequestHandler<LoginUserCommandRequest, LoginUserCommandResponse>
     {

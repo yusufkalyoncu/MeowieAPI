@@ -260,9 +260,6 @@ namespace MeowieAPI.Persistence.Migrations
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("text");
-
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("character varying(256)");
@@ -275,8 +272,6 @@ namespace MeowieAPI.Persistence.Migrations
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -417,6 +412,21 @@ namespace MeowieAPI.Persistence.Migrations
                     b.ToTable("MovieMovieList");
                 });
 
+            modelBuilder.Entity("UserFollowing", b =>
+                {
+                    b.Property<string>("FollowingId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
+
+                    b.HasKey("FollowingId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserFollowing");
+                });
+
             modelBuilder.Entity("ActorMovie", b =>
                 {
                     b.HasOne("MeowieAPI.Domain.Entities.Actor", null)
@@ -467,13 +477,6 @@ namespace MeowieAPI.Persistence.Migrations
                         .HasForeignKey("UserId");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("MeowieAPI.Domain.Entities.User", b =>
-                {
-                    b.HasOne("MeowieAPI.Domain.Entities.User", null)
-                        .WithMany("Follows")
-                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("MeowieAPI.Domain.Entities.UserLikesMovieList", b =>
@@ -561,6 +564,21 @@ namespace MeowieAPI.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("UserFollowing", b =>
+                {
+                    b.HasOne("MeowieAPI.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("FollowingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MeowieAPI.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("MeowieAPI.Domain.Entities.Director", b =>
                 {
                     b.Navigation("Movies");
@@ -579,8 +597,6 @@ namespace MeowieAPI.Persistence.Migrations
             modelBuilder.Entity("MeowieAPI.Domain.Entities.User", b =>
                 {
                     b.Navigation("Comments");
-
-                    b.Navigation("Follows");
 
                     b.Navigation("LikedMovieLists");
 

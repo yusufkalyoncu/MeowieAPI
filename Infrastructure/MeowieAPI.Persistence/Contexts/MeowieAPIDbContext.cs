@@ -20,8 +20,18 @@ namespace MeowieAPI.Persistence.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<UserLikesMovieList>()
                 .HasKey(um => new { um.UserId, um.MovieListId });
+
+            modelBuilder.Entity<User>()
+            .HasMany(u => u.Follows)
+            .WithMany()
+            .UsingEntity<Dictionary<string, object>>(
+                "UserFollowing",
+                j => j.HasOne<User>().WithMany().HasForeignKey("UserId"),
+                j => j.HasOne<User>().WithMany().HasForeignKey("FollowingId")
+            );
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

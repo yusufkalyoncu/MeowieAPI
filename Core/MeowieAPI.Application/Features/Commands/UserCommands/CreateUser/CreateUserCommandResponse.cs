@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MeowieAPI.Application.Features.Commands.CreateUser
+namespace MeowieAPI.Application.Features.Commands.UserCommands.CreateUser
 {
     public class CreateUserCommandResponse
     {
