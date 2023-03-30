@@ -10,5 +10,6 @@ namespace MeowieAPI.Application.Abstractions.Token
     public interface ITokenHandler
     {
         TokenDTO CreateAccessToken(int second);
+        string CreateRefreshToken();
     }
 }

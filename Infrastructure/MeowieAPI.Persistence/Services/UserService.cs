@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MediatR;
 using MeowieAPI.Application.Abstractions.Services;
 using MeowieAPI.Application.DTO.UserDTOs;
+using MeowieAPI.Application.Exceptions;
 using MeowieAPI.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 
@@ -38,6 +39,18 @@ namespace MeowieAPI.Persistence.Services
             {
                 return new() { Succeeded = false, Message = result.Errors.First().Description };
             }
+        }
+
+        public async Task UpdateRefreshToken(string refreshToken, User user, DateTime accessTokenDate, int addOnAccessTokenDate)
+        {
+            
+            if (user != null)
+            {
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenEndDate = accessTokenDate.AddSeconds(addOnAccessTokenDate);
+                await _userManager.UpdateAsync(user);
+            }
+            else throw new UserNotFoundException();
         }
     }
 }

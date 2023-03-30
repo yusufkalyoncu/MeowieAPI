@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using MeowieAPI.Application.Abstractions.Token;
@@ -23,7 +24,7 @@ namespace MeowieAPI.Infrastructure.Services.Token
         public TokenDTO CreateAccessToken(int second)
         {
             TokenDTO token = new();
-            token.Expiration = DateTime.UtcNow.AddMinutes(second); 
+            token.Expiration = DateTime.UtcNow.AddSeconds(second); 
             SymmetricSecurityKey securtiyKey = new(Encoding.UTF8.GetBytes(_configuration["Token:SecurityKey"]));
             SigningCredentials signingCredentials = new(securtiyKey, SecurityAlgorithms.HmacSha256);
 
@@ -36,8 +37,17 @@ namespace MeowieAPI.Infrastructure.Services.Token
                 );
             JwtSecurityTokenHandler tokenHandler = new();
             token.AccessToken = tokenHandler.WriteToken(securityToken);
+            token.RefreshToken = CreateRefreshToken();
             return token;
             
+        }
+
+        public string CreateRefreshToken()
+        {
+            byte[] number = new byte[32];
+            using RandomNumberGenerator random = RandomNumberGenerator.Create();
+            random.GetBytes(number);
+            return Convert.ToBase64String(number);
         }
     }
 }

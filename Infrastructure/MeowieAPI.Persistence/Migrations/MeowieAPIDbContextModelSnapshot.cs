@@ -251,8 +251,13 @@ namespace MeowieAPI.Persistence.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ProfileImage")
-                        .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("RefreshTokenEndDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("text");

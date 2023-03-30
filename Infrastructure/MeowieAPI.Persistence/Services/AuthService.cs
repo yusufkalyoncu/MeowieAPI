@@ -7,23 +7,27 @@ using MeowieAPI.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using MediatR;
 using MeowieAPI.Application.Exceptions;
+using Microsoft.EntityFrameworkCore;
 
 namespace MeowieAPI.Persistence.Services
 {
     public class AuthService : IAuthService
     {
         readonly UserManager<User> _userManager;
+        readonly IUserService _userService;
         readonly SignInManager<User> _signInManager;
         readonly ITokenHandler _tokenHandler;
         readonly IConfiguration _configuration;
 
         public AuthService(
             UserManager<User> userManager,
+            IUserService userService,
             SignInManager<User> signInManager,
             ITokenHandler tokenHandler,
             IConfiguration configuration)
         {
             _userManager = userManager;
+            _userService = userService;
             _signInManager = signInManager;
             _tokenHandler = tokenHandler;
             _configuration = configuration;
@@ -70,7 +74,7 @@ namespace MeowieAPI.Persistence.Services
                 throw new Exception("Invalid external authentication");
             }
             TokenDTO token = _tokenHandler.CreateAccessToken(lifeTimeSecond);
-
+            await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
             return token;
         }
 
@@ -87,11 +91,27 @@ namespace MeowieAPI.Persistence.Services
             if (result.Succeeded)
             {
                 TokenDTO token = _tokenHandler.CreateAccessToken(lifeTimeSecond);
+                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
                 return token;
             }
             else
             {
                 throw new AuthenticationErrorException();
+            }
+        }
+
+        public async Task<TokenDTO> RefreshTokenLoginAsync(string refreshToken)
+        {
+            User? user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
+            if(user != null && user?.RefreshTokenEndDate > DateTime.UtcNow)
+            {
+                TokenDTO token = _tokenHandler.CreateAccessToken(15);
+                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
+                return token;
+            }
+            else
+            {
+                throw new UserNotFoundException();
             }
         }
     }

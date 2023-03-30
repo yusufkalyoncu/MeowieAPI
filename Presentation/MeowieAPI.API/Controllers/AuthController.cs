@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using MeowieAPI.Application.Features.Commands.UserCommands.GoogleLogin;
 using MeowieAPI.Application.Features.Commands.UserCommands.LoginUser;
+using MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,12 @@ namespace MeowieAPI.API.Controllers
         public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest)
         {
             LoginUserCommandResponse response = await _mediator.Send(loginUserCommandRequest);
+            return Ok(response);
+        }
+        [HttpGet("[action]")]
+        public async Task<IActionResult> RefreshTokenLogin([FromQuery]RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest)
+        {
+            RefreshTokenLoginCommandResponse response = await _mediator.Send(refreshTokenLoginCommandRequest);
             return Ok(response);
         }
 
