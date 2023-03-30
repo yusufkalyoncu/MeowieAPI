@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MediatR;
+using MeowieAPI.Application.Abstractions.Services;
 using MeowieAPI.Application.Abstractions.Token;
 using MeowieAPI.Application.DTO;
 using MeowieAPI.Application.Exceptions;
@@ -14,42 +15,20 @@ namespace MeowieAPI.Application.Features.Commands.UserCommands.LoginUser
 {
     public class LoginUserCommandHandler : IRequestHandler<LoginUserCommandRequest, LoginUserCommandResponse>
     {
-        readonly UserManager<User> _userManager;
-        readonly SignInManager<User> _signInManager;
-        readonly ITokenHandler _tokenHandler;
-        public LoginUserCommandHandler(
-            UserManager<User> userManager,
-            SignInManager<User> signInManager,
-            ITokenHandler tokenHandler)
+        readonly IAuthService _authService;
+
+        public LoginUserCommandHandler(IAuthService authService)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _tokenHandler = tokenHandler;
+            _authService = authService;
         }
 
         public async Task<LoginUserCommandResponse> Handle(LoginUserCommandRequest request, CancellationToken cancellationToken)
         {
-            User? user = await _userManager.FindByNameAsync(request.UsernameOrEmail);
-            if (user == null)
-                user = await _userManager.FindByEmailAsync(request.UsernameOrEmail);
-
-            if (user == null)
-                throw new UserNotFoundException();
-
-            SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
-            if (result.Succeeded)
+            TokenDTO token = await _authService.LoginAsync(request.UsernameOrEmail, request.Password, 15);
+            return new()
             {
-                TokenDTO token = _tokenHandler.CreateAccessToken(5);
-                return new()
-                {
-                    Token = token
-                };
-            }
-            else
-            {
-                throw new AuthenticationErrorException();
-            }
-
+                Token = token
+            };
 
         }
     }

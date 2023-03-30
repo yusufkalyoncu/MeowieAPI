@@ -51,10 +51,6 @@
         "net7.0": {
           "targetAlias": "net70",
           "dependencies": {
-            "Google.Apis.Auth": {
-              "target": "Package",
-              "version": "[1.60.0, )"
-            },
             "MediatR": {
               "target": "Package",
               "version": "[12.0.1, )"
@@ -219,6 +215,10 @@
         "net7.0": {
           "targetAlias": "net70",
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.60.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[7.0.4, )"

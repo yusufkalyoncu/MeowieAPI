@@ -20,10 +20,10 @@ namespace MeowieAPI.Infrastructure.Services.Token
             _configuration = configuration;
         }
 
-        public TokenDTO CreateAccessToken(int minute)
+        public TokenDTO CreateAccessToken(int second)
         {
             TokenDTO token = new();
-            token.Expiration = DateTime.UtcNow.AddMinutes(minute); 
+            token.Expiration = DateTime.UtcNow.AddMinutes(second); 
             SymmetricSecurityKey securtiyKey = new(Encoding.UTF8.GetBytes(_configuration["Token:SecurityKey"]));
             SigningCredentials signingCredentials = new(securtiyKey, SecurityAlgorithms.HmacSha256);
 

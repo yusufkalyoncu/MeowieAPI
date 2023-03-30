@@ -1,4 +1,6 @@
 ﻿using MediatR;
+using MeowieAPI.Application.Abstractions.Services;
+using MeowieAPI.Application.DTO.UserDTOs;
 using MeowieAPI.Application.Exceptions;
 using MeowieAPI.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
@@ -7,31 +9,29 @@ namespace MeowieAPI.Application.Features.Commands.UserCommands.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest, CreateUserCommandResponse>
     {
-        readonly UserManager<User> _userManager;
+        readonly IUserService _userService;
 
-        public CreateUserCommandHandler(UserManager<User> userManager)
+        public CreateUserCommandHandler(IUserService userService)
         {
-            _userManager = userManager;
+            _userService = userService;
         }
 
         public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
         {
-            IdentityResult result = await _userManager.CreateAsync(new()
+            CreateUserResponseDTO response = await _userService.CreateAsync(new()
             {
-                Id = Guid.NewGuid().ToString(),
-                Name = request.Name,
-                UserName = request.Username,
                 Email = request.Email,
-                ProfileImage = "test"
-            }, request.Password);
-            if (result.Succeeded)
+                Name = request.Name,
+                Password = request.Password,
+                PasswordConfirm = request.PasswordConfirm,
+                Username = request.Username
+            });
+
+            return new()
             {
-                return new() { Succeeded = true, Message = "User created successfully" };
-            }
-            else
-            {
-                return new() { Succeeded = false, Message = result.Errors.First().Description };
-            }
+                Message = response.Message,
+                Succeeded = response.Succeeded,
+            };
         }
     }
 }

@@ -1339,7 +1339,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Google.Apis.Auth": "1.60.0",
           "MediatR": "12.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "MeowieAPI.Domain": "1.0.0",
@@ -3183,6 +3182,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Google.Apis.Auth >= 1.60.0",
       "MeowieAPI.Application >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 7.0.4",
       "Microsoft.EntityFrameworkCore >= 7.0.3",
@@ -3245,6 +3245,10 @@
       "net7.0": {
         "targetAlias": "net70",
         "dependencies": {
+          "Google.Apis.Auth": {
+            "target": "Package",
+            "version": "[1.60.0, )"
+          },
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
             "version": "[7.0.4, )"

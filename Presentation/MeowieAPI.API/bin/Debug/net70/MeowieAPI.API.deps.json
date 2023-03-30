@@ -744,7 +744,6 @@
       },
       "MeowieAPI.Application/1.0.0": {
         "dependencies": {
-          "Google.Apis.Auth": "1.60.0",
           "MediatR": "12.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "MeowieAPI.Domain": "1.0.0",
@@ -778,6 +777,7 @@
       },
       "MeowieAPI.Persistence/1.0.0": {
         "dependencies": {
+          "Google.Apis.Auth": "1.60.0",
           "MeowieAPI.Application": "1.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "7.0.4",
           "Microsoft.EntityFrameworkCore": "7.0.3",

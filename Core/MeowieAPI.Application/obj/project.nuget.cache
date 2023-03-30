@@ -1,12 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "L4jkeocZQcfXSEUQUGqbgU5sR/QJR5APNhQx86SrkgePV1x1ESJ4DDlbJdQ4I/fOAFQORUAlGv1dp57AGwxKDg==",
+  "dgSpecHash": "ni9Lh0O91c66xQbYMO6C3YhP6y+XAOJpHneFn6VrJi08q/xhbswncnfS3ehyJK5yOiMReIJqPvrv6tpFdphp7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Core\\MeowieAPI.Application\\MeowieAPI.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Yusuf\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
-    "C:\\Users\\Yusuf\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
-    "C:\\Users\\Yusuf\\.nuget\\packages\\google.apis.core\\1.60.0\\google.apis.core.1.60.0.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Yusuf\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",

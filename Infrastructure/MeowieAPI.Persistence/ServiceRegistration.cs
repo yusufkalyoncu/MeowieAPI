@@ -16,6 +16,7 @@ using MeowieAPI.Persistence.Services;
 using MeowieAPI.Application.Abstractions.ImdbService;
 using MeowieAPI.Domain.Entities.Identity;
 using MeowieAPI.Domain.Entities;
+using MeowieAPI.Application.Abstractions.Services;
 
 namespace MeowieAPI.Persistence
 {
@@ -53,6 +54,8 @@ namespace MeowieAPI.Persistence
             services.AddScoped<IMovieListWriteRepository, MovieListWriteRepository>();
 
             services.AddScoped<IImdbService, ImdbService>();
-        }
+
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();        }
     }
 }
