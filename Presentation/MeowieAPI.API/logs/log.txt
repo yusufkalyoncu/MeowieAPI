@@ -1,0 +1,478 @@
+2023-04-01 18:48:08.314 +03:00 [INF] User profile is available. Using 'C:\Users\Yusuf\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-04-01 18:48:10.799 +03:00 [INF] Now listening on: https://localhost:7208
+2023-04-01 18:48:10.904 +03:00 [INF] Now listening on: http://localhost:5208
+2023-04-01 18:48:10.918 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-01 18:48:10.922 +03:00 [INF] Hosting environment: Development
+2023-04-01 18:48:10.925 +03:00 [INF] Content root path: C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API
+2023-04-01 18:48:14.889 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/swagger/index.html - -
+2023-04-01 18:48:16.511 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/swagger/index.html - - - 200 - text/html;charset=utf-8 1631.7828ms
+2023-04-01 18:48:16.644 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/_framework/aspnetcore-browser-refresh.js - -
+2023-04-01 18:48:16.650 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/_vs/browserLink - -
+2023-04-01 18:48:16.788 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 143.8718ms
+2023-04-01 18:48:17.563 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 912.5175ms
+2023-04-01 18:48:18.023 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/swagger/v1/swagger.json - -
+2023-04-01 18:48:18.667 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 644.6331ms
+2023-04-01 18:49:30.737 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7208/api/Auth/Login application/json-patch+json 54
+2023-04-01 18:49:30.784 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7208
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json-patch+json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 54
+sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-04-01 18:49:30.796 +03:00 [INF] CORS policy execution successful.
+2023-04-01 18:49:30.838 +03:00 [INF] Executing endpoint 'MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API)'
+2023-04-01 18:49:30.914 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MeowieAPI.Application.Features.Commands.UserCommands.LoginUser.LoginUserCommandRequest) on controller MeowieAPI.API.Controllers.AuthController (MeowieAPI.API).
+2023-04-01 18:49:30.992 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "yusuf",
+  "password": "1234"
+}
+2023-04-01 18:49:36.087 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:49:37.095 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:49:37.544 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "Name" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "ProfileImage" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2023-04-01 18:49:37.601 +03:00 [INF] Executing OkObjectResult, writing value of type 'MeowieAPI.Application.Features.Commands.UserCommands.LoginUser.LoginUserCommandResponse'.
+2023-04-01 18:49:37.698 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 421
+2023-04-01 18:49:37.721 +03:00 [INF] Executed action MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API) in 6791.4679ms
+2023-04-01 18:49:37.729 +03:00 [INF] Executed endpoint 'MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API)'
+2023-04-01 18:49:37.751 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoieXVzdWYiLCJuYmYiOjE2ODAzNjQxNzYsImV4cCI6MTY4MDM2NDE5MSwiaXNzIjoid3d3Lm1lb2V3aWVhcGkuY29tIiwiYXVkIjoid3d3Lm1lb3dpZS5jb20ifQ.xWblJhuKSIJVjsm5_keEoBeST0ryEEUiGT7X0T-UkM8","expiration":"2023-04-01T15:49:51.8115061Z","refreshToken":"V97wg6y/QrM+20Gw4kSTFzyd3/L0f6qhHotV0XgHGXM="}}
+2023-04-01 18:49:37.796 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7208/api/Auth/Login application/json-patch+json 54 - 200 421 application/json;+charset=utf-8 7059.3112ms
+2023-04-01 18:49:56.277 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/api/Auth/RefreshTokenLogin?RefreshToken=V97wg6y%2FQrM%2B20Gw4kSTFzyd3%2FL0f6qhHotV0XgHGXM%3D - -
+2023-04-01 18:49:56.290 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Auth/RefreshTokenLogin
+Accept: */*
+Host: localhost:7208
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-04-01 18:49:56.308 +03:00 [INF] Executing endpoint 'MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API)'
+2023-04-01 18:49:56.328 +03:00 [INF] Route matched with {action = "RefreshTokenLogin", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshTokenLogin(MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin.RefreshTokenLoginCommandRequest) on controller MeowieAPI.API.Controllers.AuthController (MeowieAPI.API).
+2023-04-01 18:49:56.582 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__refreshToken_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."RefreshToken" = @__refreshToken_0
+LIMIT 1
+2023-04-01 18:49:56.600 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:49:56.627 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "Name" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "ProfileImage" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2023-04-01 18:49:56.642 +03:00 [INF] Executing OkObjectResult, writing value of type 'MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin.RefreshTokenLoginCommandResponse'.
+2023-04-01 18:49:56.652 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 421
+2023-04-01 18:49:56.655 +03:00 [INF] Executed action MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API) in 320.0896ms
+2023-04-01 18:49:56.669 +03:00 [INF] Executed endpoint 'MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API)'
+2023-04-01 18:49:56.672 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoieXVzdWYiLCJuYmYiOjE2ODAzNjQxOTYsImV4cCI6MTY4MDM2NDIxMSwiaXNzIjoid3d3Lm1lb2V3aWVhcGkuY29tIiwiYXVkIjoid3d3Lm1lb3dpZS5jb20ifQ.Fa-2sYvm1fXM_kEsvbIMjLNQPu5tMKQuwewWPNHVuvM","expiration":"2023-04-01T15:50:11.5942354Z","refreshToken":"qwWUWum3O6EXyuqGeMDS2SgtWFp3E5y2Zxnhtd3oO+U="}}
+2023-04-01 18:49:56.675 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/api/Auth/RefreshTokenLogin?RefreshToken=V97wg6y%2FQrM%2B20Gw4kSTFzyd3%2FL0f6qhHotV0XgHGXM%3D - - - 200 421 application/json;+charset=utf-8 398.1267ms
+2023-04-01 18:50:31.347 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/api/Auth/RefreshTokenLogin?RefreshToken=qwWUWum3O6EXyuqGeMDS2SgtWFp3E5y2Zxnhtd3oO%2BU - -
+2023-04-01 18:50:31.367 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Auth/RefreshTokenLogin
+Accept: */*
+Host: localhost:7208
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-04-01 18:50:31.386 +03:00 [INF] Executing endpoint 'MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API)'
+2023-04-01 18:50:31.389 +03:00 [INF] Route matched with {action = "RefreshTokenLogin", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshTokenLogin(MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin.RefreshTokenLoginCommandRequest) on controller MeowieAPI.API.Controllers.AuthController (MeowieAPI.API).
+2023-04-01 18:50:31.444 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__refreshToken_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."RefreshToken" = @__refreshToken_0
+LIMIT 1
+2023-04-01 18:50:31.852 +03:00 [INF] Executed action MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API) in 456.4581ms
+2023-04-01 18:50:31.859 +03:00 [INF] Executed endpoint 'MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API)'
+2023-04-01 18:50:32.094 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+MeowieAPI.Application.Exceptions.UserNotFoundException: User not found!
+   at MeowieAPI.Persistence.Services.AuthService.RefreshTokenLoginAsync(String refreshToken) in C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Infrastructure\MeowieAPI.Persistence\Services\AuthService.cs:line 114
+   at MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin.RefreshTokenLoginCommandHandler.Handle(RefreshTokenLoginCommandRequest request, CancellationToken cancellationToken) in C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Core\MeowieAPI.Application\Features\Commands\UserCommands\RefreshTokenLogin\RefreshTokenLoginCommandHandler.cs:line 23
+   at MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin(RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest) in C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\Controllers\AuthController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\Program.cs:line 105
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-04-01 18:50:32.315 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/api/Auth/RefreshTokenLogin?RefreshToken=qwWUWum3O6EXyuqGeMDS2SgtWFp3E5y2Zxnhtd3oO%2BU - - - 500 - text/plain;+charset=utf-8 975.0338ms
+2023-04-01 18:50:48.516 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/swagger/index.html - -
+2023-04-01 18:50:48.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/swagger/index.html - - - 200 - text/html;charset=utf-8 33.1967ms
+2023-04-01 18:50:48.601 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/_framework/aspnetcore-browser-refresh.js - -
+2023-04-01 18:50:48.602 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/_vs/browserLink - -
+2023-04-01 18:50:48.606 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 5.8671ms
+2023-04-01 18:50:48.706 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 104.6452ms
+2023-04-01 18:50:48.983 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/swagger/v1/swagger.json - -
+2023-04-01 18:50:49.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 50.2325ms
+2023-04-01 18:50:49.042 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/swagger/favicon-32x32.png - -
+2023-04-01 18:50:49.069 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-04-01 18:50:49.073 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/swagger/favicon-32x32.png - - - 200 628 image/png 30.8736ms
+2023-04-01 18:52:20.581 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7208/api/Auth/Login application/json-patch+json 54
+2023-04-01 18:52:20.603 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7208
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json-patch+json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 54
+sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-04-01 18:52:20.611 +03:00 [INF] CORS policy execution successful.
+2023-04-01 18:52:20.615 +03:00 [INF] Executing endpoint 'MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API)'
+2023-04-01 18:52:20.618 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MeowieAPI.Application.Features.Commands.UserCommands.LoginUser.LoginUserCommandRequest) on controller MeowieAPI.API.Controllers.AuthController (MeowieAPI.API).
+2023-04-01 18:52:20.625 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "yusuf",
+  "password": "1234"
+}
+2023-04-01 18:52:20.644 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:52:20.853 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:52:20.885 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "Name" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "ProfileImage" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2023-04-01 18:52:20.895 +03:00 [INF] Executing OkObjectResult, writing value of type 'MeowieAPI.Application.Features.Commands.UserCommands.LoginUser.LoginUserCommandResponse'.
+2023-04-01 18:52:20.899 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 421
+2023-04-01 18:52:20.903 +03:00 [INF] Executed action MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API) in 280.2537ms
+2023-04-01 18:52:20.909 +03:00 [INF] Executed endpoint 'MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API)'
+2023-04-01 18:52:20.913 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoieXVzdWYiLCJuYmYiOjE2ODAzNjQzNDAsImV4cCI6MTY4MDM2NDM1NSwiaXNzIjoid3d3Lm1lb2V3aWVhcGkuY29tIiwiYXVkIjoid3d3Lm1lb3dpZS5jb20ifQ.-8O9FEfbhew9SfZ3QJO6VAiiGexEJRqI89-5EGCTz6E","expiration":"2023-04-01T15:52:35.8468531Z","refreshToken":"CNz2Vifagzp/SoOkQTYSLe423DEBqMrjXV9rJ3XG4L8="}}
+2023-04-01 18:52:20.918 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7208/api/Auth/Login application/json-patch+json 54 - 200 421 application/json;+charset=utf-8 339.0286ms
+2023-04-01 18:52:49.951 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/api/Auth/RefreshTokenLogin?RefreshToken=CNz2Vifagzp%2FSoOkQTYSLe423DEBqMrjXV9rJ3XG4L8%3D - -
+2023-04-01 18:52:49.956 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Auth/RefreshTokenLogin
+Accept: */*
+Host: localhost:7208
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-04-01 18:52:49.964 +03:00 [INF] Executing endpoint 'MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API)'
+2023-04-01 18:52:49.967 +03:00 [INF] Route matched with {action = "RefreshTokenLogin", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshTokenLogin(MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin.RefreshTokenLoginCommandRequest) on controller MeowieAPI.API.Controllers.AuthController (MeowieAPI.API).
+2023-04-01 18:52:50.023 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__refreshToken_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."RefreshToken" = @__refreshToken_0
+LIMIT 1
+2023-04-01 18:52:50.035 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:52:50.049 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "Name" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "ProfileImage" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2023-04-01 18:52:50.057 +03:00 [INF] Executing OkObjectResult, writing value of type 'MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin.RefreshTokenLoginCommandResponse'.
+2023-04-01 18:52:50.061 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 420
+2023-04-01 18:52:50.064 +03:00 [INF] Executed action MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API) in 85.2414ms
+2023-04-01 18:52:50.067 +03:00 [INF] Executed endpoint 'MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API)'
+2023-04-01 18:52:50.072 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoieXVzdWYiLCJuYmYiOjE2ODAzNjQzNzAsImV4cCI6MTY4MDM2NDM4NSwiaXNzIjoid3d3Lm1lb2V3aWVhcGkuY29tIiwiYXVkIjoid3d3Lm1lb3dpZS5jb20ifQ.SZa2Xmgkb3zy8_RNemTbSYpjwaC_DO7kHnqxtrY7kGo","expiration":"2023-04-01T15:53:05.031003Z","refreshToken":"uLCMSssvYeX05dkBoVBImE0w80nPytwV7w9jo4G22fc="}}
+2023-04-01 18:52:50.076 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/api/Auth/RefreshTokenLogin?RefreshToken=CNz2Vifagzp%2FSoOkQTYSLe423DEBqMrjXV9rJ3XG4L8%3D - - - 200 420 application/json;+charset=utf-8 125.6259ms
+2023-04-01 18:53:01.239 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/api/Auth/RefreshTokenLogin?RefreshToken=uLCMSssvYeX05dkBoVBImE0w80nPytwV7w9jo4G22fc%3D - -
+2023-04-01 18:53:01.243 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Auth/RefreshTokenLogin
+Accept: */*
+Host: localhost:7208
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-04-01 18:53:01.265 +03:00 [INF] Executing endpoint 'MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API)'
+2023-04-01 18:53:01.268 +03:00 [INF] Route matched with {action = "RefreshTokenLogin", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshTokenLogin(MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin.RefreshTokenLoginCommandRequest) on controller MeowieAPI.API.Controllers.AuthController (MeowieAPI.API).
+2023-04-01 18:53:01.291 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__refreshToken_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."RefreshToken" = @__refreshToken_0
+LIMIT 1
+2023-04-01 18:53:01.305 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:53:01.324 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "Name" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "ProfileImage" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2023-04-01 18:53:01.331 +03:00 [INF] Executing OkObjectResult, writing value of type 'MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin.RefreshTokenLoginCommandResponse'.
+2023-04-01 18:53:01.335 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 421
+2023-04-01 18:53:01.338 +03:00 [INF] Executed action MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API) in 56.6422ms
+2023-04-01 18:53:01.341 +03:00 [INF] Executed endpoint 'MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API)'
+2023-04-01 18:53:01.343 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoieXVzdWYiLCJuYmYiOjE2ODAzNjQzODEsImV4cCI6MTY4MDM2NDM5NiwiaXNzIjoid3d3Lm1lb2V3aWVhcGkuY29tIiwiYXVkIjoid3d3Lm1lb3dpZS5jb20ifQ.YdYvxG0r177kMmeRTw5gpizafYuyw0q9ry3XCF6GSCc","expiration":"2023-04-01T15:53:16.2987607Z","refreshToken":"SRTtAggl7efZpjPzsFU0wR6KqhAX7A6doxHhy4/inFI="}}
+2023-04-01 18:53:01.347 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/api/Auth/RefreshTokenLogin?RefreshToken=uLCMSssvYeX05dkBoVBImE0w80nPytwV7w9jo4G22fc%3D - - - 200 421 application/json;+charset=utf-8 108.1153ms
+2023-04-01 18:54:16.359 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/api/Auth/RefreshTokenLogin?RefreshToken=SRTtAggl7efZpjPzsFU0wR6KqhAX7A6doxHhy4%2FinFI%3D - -
+2023-04-01 18:54:16.385 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Auth/RefreshTokenLogin
+Accept: */*
+Host: localhost:7208
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-04-01 18:54:16.397 +03:00 [INF] Executing endpoint 'MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API)'
+2023-04-01 18:54:16.401 +03:00 [INF] Route matched with {action = "RefreshTokenLogin", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshTokenLogin(MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin.RefreshTokenLoginCommandRequest) on controller MeowieAPI.API.Controllers.AuthController (MeowieAPI.API).
+2023-04-01 18:54:16.496 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__refreshToken_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."RefreshToken" = @__refreshToken_0
+LIMIT 1
+2023-04-01 18:54:16.858 +03:00 [INF] Executed action MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API) in 447.1344ms
+2023-04-01 18:54:16.862 +03:00 [INF] Executed endpoint 'MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin (MeowieAPI.API)'
+2023-04-01 18:54:17.087 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+MeowieAPI.Application.Exceptions.UserNotFoundException: User not found!
+   at MeowieAPI.Persistence.Services.AuthService.RefreshTokenLoginAsync(String refreshToken) in C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Infrastructure\MeowieAPI.Persistence\Services\AuthService.cs:line 114
+   at MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin.RefreshTokenLoginCommandHandler.Handle(RefreshTokenLoginCommandRequest request, CancellationToken cancellationToken) in C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Core\MeowieAPI.Application\Features\Commands\UserCommands\RefreshTokenLogin\RefreshTokenLoginCommandHandler.cs:line 23
+   at MeowieAPI.API.Controllers.AuthController.RefreshTokenLogin(RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest) in C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\Controllers\AuthController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API\Program.cs:line 105
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-04-01 18:54:17.132 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/api/Auth/RefreshTokenLogin?RefreshToken=SRTtAggl7efZpjPzsFU0wR6KqhAX7A6doxHhy4%2FinFI%3D - - - 500 - text/plain;+charset=utf-8 773.1201ms
+2023-04-01 18:55:14.571 +03:00 [INF] User profile is available. Using 'C:\Users\Yusuf\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-04-01 18:55:15.719 +03:00 [INF] Now listening on: https://localhost:7208
+2023-04-01 18:55:15.724 +03:00 [INF] Now listening on: http://localhost:5208
+2023-04-01 18:55:15.731 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-01 18:55:15.734 +03:00 [INF] Hosting environment: Development
+2023-04-01 18:55:15.738 +03:00 [INF] Content root path: C:\Users\Yusuf\Desktop\Projects\MeowieAPI\Presentation\MeowieAPI.API
+2023-04-01 18:55:17.175 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/swagger/index.html - -
+2023-04-01 18:55:18.193 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/swagger/index.html - - - 200 - text/html;charset=utf-8 1023.2035ms
+2023-04-01 18:55:18.253 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/_framework/aspnetcore-browser-refresh.js - -
+2023-04-01 18:55:18.253 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/_vs/browserLink - -
+2023-04-01 18:55:18.287 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 34.4322ms
+2023-04-01 18:55:18.398 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 144.9828ms
+2023-04-01 18:55:18.682 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7208/swagger/v1/swagger.json - -
+2023-04-01 18:55:18.998 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7208/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 316.0137ms
+2023-04-01 18:55:36.555 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7208/api/Auth/Login application/json-patch+json 54
+2023-04-01 18:55:36.591 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7208
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json-patch+json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 54
+sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-04-01 18:55:36.605 +03:00 [INF] CORS policy execution successful.
+2023-04-01 18:55:36.656 +03:00 [INF] Executing endpoint 'MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API)'
+2023-04-01 18:55:36.717 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MeowieAPI.Application.Features.Commands.UserCommands.LoginUser.LoginUserCommandRequest) on controller MeowieAPI.API.Controllers.AuthController (MeowieAPI.API).
+2023-04-01 18:55:36.787 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "yusuf",
+  "password": "1234"
+}
+2023-04-01 18:55:40.980 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:55:41.962 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:55:42.280 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "Name" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "ProfileImage" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2023-04-01 18:55:42.339 +03:00 [INF] Executing OkObjectResult, writing value of type 'MeowieAPI.Application.Features.Commands.UserCommands.LoginUser.LoginUserCommandResponse'.
+2023-04-01 18:55:42.457 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 421
+2023-04-01 18:55:42.474 +03:00 [INF] Executed action MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API) in 5742.0051ms
+2023-04-01 18:55:42.478 +03:00 [INF] Executed endpoint 'MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API)'
+2023-04-01 18:55:42.485 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoieXVzdWYiLCJuYmYiOjE2ODAzNjQ1NDEsImV4cCI6MTY4MDM2NDU1NiwiaXNzIjoid3d3Lm1lb2V3aWVhcGkuY29tIiwiYXVkIjoid3d3Lm1lb3dpZS5jb20ifQ.Zd3JyLO2KYQLxwklbZfXCjm6T7TEBEsz7WgvG1bM_5o","expiration":"2023-04-01T15:55:56.6828353Z","refreshToken":"wYY9HkFHqjUpdkBn5agv+Wi6xKrd1cdKmBgFiw/UGqo="}}
+2023-04-01 18:55:42.515 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7208/api/Auth/Login application/json-patch+json 54 - 200 421 application/json;+charset=utf-8 5960.8634ms
+2023-04-01 18:56:49.143 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7208/api/Auth/Login application/json-patch+json 54
+2023-04-01 18:56:49.153 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7208
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json-patch+json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 54
+sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-04-01 18:56:49.163 +03:00 [INF] CORS policy execution successful.
+2023-04-01 18:56:49.177 +03:00 [INF] Executing endpoint 'MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API)'
+2023-04-01 18:56:49.181 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MeowieAPI.Application.Features.Commands.UserCommands.LoginUser.LoginUserCommandRequest) on controller MeowieAPI.API.Controllers.AuthController (MeowieAPI.API).
+2023-04-01 18:56:49.189 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "yusuf",
+  "password": "1234"
+}
+2023-04-01 18:56:49.356 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:56:49.563 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."Name", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfileImage", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-04-01 18:56:49.581 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "Name" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "ProfileImage" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2023-04-01 18:56:49.596 +03:00 [INF] Executing OkObjectResult, writing value of type 'MeowieAPI.Application.Features.Commands.UserCommands.LoginUser.LoginUserCommandResponse'.
+2023-04-01 18:56:49.600 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Content-Length: 421
+2023-04-01 18:56:49.606 +03:00 [INF] Executed action MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API) in 420.0693ms
+2023-04-01 18:56:49.611 +03:00 [INF] Executed endpoint 'MeowieAPI.API.Controllers.AuthController.Login (MeowieAPI.API)'
+2023-04-01 18:56:49.614 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoieXVzdWYiLCJuYmYiOjE2ODAzNjQ2MDksImV4cCI6MTY4MDM2NDYyNCwiaXNzIjoid3d3Lm1lb2V3aWVhcGkuY29tIiwiYXVkIjoid3d3Lm1lb3dpZS5jb20ifQ.hMKnktNJETK1AOEWgLklRH_nr_y-5wHIIuZ9AiaFXFk","expiration":"2023-04-01T15:57:04.5570093Z","refreshToken":"4RnoWBFqaXSBIt8b0rWHPcC9pb2OgThaMNHzxjrBi8A="}}
+2023-04-01 18:56:49.620 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7208/api/Auth/Login application/json-patch+json 54 - 200 421 application/json;+charset=utf-8 476.3549ms

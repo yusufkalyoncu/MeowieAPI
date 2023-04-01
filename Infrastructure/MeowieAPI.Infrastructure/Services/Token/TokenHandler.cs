@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using MeowieAPI.Application.Abstractions.Token;
 using MeowieAPI.Application.DTO;
+using MeowieAPI.Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
@@ -21,7 +23,7 @@ namespace MeowieAPI.Infrastructure.Services.Token
             _configuration = configuration;
         }
 
-        public TokenDTO CreateAccessToken(int second)
+        public TokenDTO CreateAccessToken(int second, User user)
         {
             TokenDTO token = new();
             token.Expiration = DateTime.UtcNow.AddSeconds(second); 
@@ -33,7 +35,8 @@ namespace MeowieAPI.Infrastructure.Services.Token
                 issuer: _configuration["Token:Issuer"],
                 expires: token.Expiration,
                 notBefore: DateTime.UtcNow,
-                signingCredentials: signingCredentials
+                signingCredentials: signingCredentials,
+                claims: new List<Claim>() { new(ClaimTypes.Name, user.UserName)}
                 );
             JwtSecurityTokenHandler tokenHandler = new();
             token.AccessToken = tokenHandler.WriteToken(securityToken);
