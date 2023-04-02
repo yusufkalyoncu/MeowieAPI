@@ -1,13 +1,13 @@
 using System.Security.Claims;
 using System.Text;
 using MeowieAPI.API.Configuration.ColumnWriters;
+using MeowieAPI.API.Extensions;
 using MeowieAPI.Application;
 using MeowieAPI.Infrastructure;
 using MeowieAPI.Infrastructure.enums;
 using MeowieAPI.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpLogging;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using Serilog.Context;
@@ -85,7 +85,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+//my global exception handler
+app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
 
 app.UseStaticFiles();
 
