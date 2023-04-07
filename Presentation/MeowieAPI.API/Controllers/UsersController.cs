@@ -23,7 +23,8 @@ namespace MeowieAPI.API.Controllers
         public async Task<IActionResult> CreateUser(CreateUserCommandRequest createUserCommandRequest)
         {
             CreateUserCommandResponse response = await _mediator.Send(createUserCommandRequest);
-            return Ok();
+            if (response.Succeeded) return Ok(response);
+            else return BadRequest(response);
         }
 
 

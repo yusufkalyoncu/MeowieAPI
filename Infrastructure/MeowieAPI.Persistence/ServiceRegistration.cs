@@ -29,10 +29,13 @@ namespace MeowieAPI.Persistence
                 options =>
                 {
                     options.Password.RequireNonAlphanumeric = false;
-                    options.Password.RequiredLength = 3;
+                    options.Password.RequiredLength = 6;
                     options.Password.RequireUppercase = false;
                     options.Password.RequireLowercase = false;
                     options.Password.RequireDigit = false;
+
+                    options.User.RequireUniqueEmail = true;
+
                     
                 }).AddEntityFrameworkStores<MeowieAPIDbContext>();
 
