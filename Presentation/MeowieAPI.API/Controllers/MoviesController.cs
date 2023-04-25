@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using MeowieAPI.Application.Features.Commands.AddMovieBanner;
+using MeowieAPI.Application.Features.Commands.MovieCommands.RateMovie;
 using MeowieAPI.Application.Features.Queries.GetAllMovie;
 using MeowieAPI.Application.Features.Queries.GetMovieByGenre;
 using MeowieAPI.Application.Features.Queries.GetRandomMovie;
@@ -60,6 +61,15 @@ namespace MeowieAPI.API.Controllers
             GetMovieByGenreQueryResponse response = await _mediator.Send(getMovieByGenreQueryRequest);
             if (response != null) return Ok(response);
             else return NotFound();
+        }
+
+        [HttpPost("rate")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<IActionResult> RateMovie([FromBody]RateMovieCommandRequest rateMovieCommandRequest)
+        {
+            RateMovieCommandResponse response = await _mediator.Send(rateMovieCommandRequest);
+            if (response.Success) return Ok(response);
+            else return BadRequest(response);
         }
     }
 }

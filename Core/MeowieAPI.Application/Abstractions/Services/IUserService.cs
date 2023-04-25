@@ -12,5 +12,6 @@ namespace MeowieAPI.Application.Abstractions.Services
     {
         Task<CreateUserResponseDTO> CreateAsync(CreateUserDTO model);
         Task UpdateRefreshToken(string refreshToken, User user, DateTime accessTokenDate, int addOnAccessTokenDate);
+        Task<User> GetUserByUsername(string username);
     }
 }

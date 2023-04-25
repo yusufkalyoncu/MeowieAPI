@@ -52,5 +52,13 @@ namespace MeowieAPI.Persistence.Services
             }
             else throw new UserNotFoundException();
         }
+
+
+        public async Task<User> GetUserByUsername(string username)
+        {
+            User? user = await _userManager.FindByNameAsync(username);
+            if (user != null) return user;
+            else throw new UserNotFoundException();
+        }
     }
 }
