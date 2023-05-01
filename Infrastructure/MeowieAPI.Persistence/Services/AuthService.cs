@@ -74,7 +74,7 @@ namespace MeowieAPI.Persistence.Services
                 throw new Exception("Invalid external authentication");
             }
             TokenDTO token = _tokenHandler.CreateAccessToken(lifeTimeSecond, user);
-            await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
+            await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 60);
             return token;
         }
 
@@ -91,7 +91,7 @@ namespace MeowieAPI.Persistence.Services
             if (result.Succeeded)
             {
                 TokenDTO token = _tokenHandler.CreateAccessToken(lifeTimeSecond, user);
-                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
+                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 60);
                 return token;
             }
             else
@@ -106,7 +106,7 @@ namespace MeowieAPI.Persistence.Services
             if(user != null && user?.RefreshTokenEndDate > DateTime.UtcNow)
             {
                 TokenDTO token = _tokenHandler.CreateAccessToken(15, user);
-                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
+                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 60);
                 return token;
             }
             else

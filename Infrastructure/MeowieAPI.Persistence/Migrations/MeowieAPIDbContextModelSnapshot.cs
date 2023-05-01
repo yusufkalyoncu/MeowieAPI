@@ -167,7 +167,14 @@ namespace MeowieAPI.Persistence.Migrations
                     b.Property<float>("ImdbRating")
                         .HasColumnType("real");
 
+                    b.Property<int>("ImdbRatingCount")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("OriginalName")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -176,6 +183,9 @@ namespace MeowieAPI.Persistence.Migrations
 
                     b.Property<float>("UserRating")
                         .HasColumnType("real");
+
+                    b.Property<int>("UserRatingCount")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

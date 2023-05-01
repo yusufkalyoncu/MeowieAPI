@@ -20,7 +20,7 @@ namespace MeowieAPI.Application.Features.Queries.GetAllMovie
 
         public async Task<GetAllMovieQueryResponse> Handle(GetAllMovieQueryRequest request, CancellationToken cancellationToken)
         {
-            List<MovieDTO> movies = _movieReadRepository.GetAll().Skip(request.Pagination.Page * request.Pagination.Size).Take(request.Pagination.Size).Select(
+            List<MovieDTO> movies = _movieReadRepository.GetAll().Skip(request.Page * request.Count).Take(request.Count).Select(
                 m => new MovieDTO
                 {
                     Duration = m.Duration,
@@ -35,7 +35,25 @@ namespace MeowieAPI.Application.Features.Queries.GetAllMovie
                     ReleaseDate = m.ReleaseDate
                 }).ToList();
 
+            if (request.Shuffle)
+            {
+                return new GetAllMovieQueryResponse() { Movies = ShuffleMovies(movies) };
+            }
+
             return new GetAllMovieQueryResponse() { Movies = movies };
+        }
+
+        public List<MovieDTO> ShuffleMovies(List<MovieDTO> movies)
+        {
+            Random rnd = new Random();
+            for (int i = 0; i < movies.Count; i++)
+            {
+                int randomIndex = rnd.Next(movies.Count);
+                MovieDTO movie = movies[randomIndex];
+                movies[randomIndex] = movies[i];
+                movies[i] = movie;
+            }
+            return movies;
         }
     }
 }

@@ -36,7 +36,8 @@ namespace MeowieAPI.Application.Features.Queries.GetSingleMovie
                 BannerURL = movie.BannerURL,
                 Director = new() { Id = movie.Director.Id, Name = movie.Director.Name, ImageURL = movie.Director.ImageURL },
                 DirectorId = movie.DirectorId,
-                Actors = movie.Actors.Select(a => new ActorDTO() { Id = a.Id, Name = a.Name, ImageURL = a.ImageURL }).ToList()
+                Actors = movie.Actors.Select(a => new ActorDTO() { Id = a.Id, Name = a.Name, ImageURL = a.ImageURL }).ToList(),
+                Comments = movie.Comments.Select(c => new CommentDTO() { Content = c.Content, CreatedDate = c.CreatedDate, Username = c.User.UserName, UserRating = c.UserRating }).ToList(),
             };
             return new GetSingleMovieQueryResponse() { Movie = response };
         }

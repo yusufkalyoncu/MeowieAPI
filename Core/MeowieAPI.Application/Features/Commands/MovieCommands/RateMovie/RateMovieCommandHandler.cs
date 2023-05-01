@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MediatR;
 using MeowieAPI.Application.Abstractions.Services;
 using MeowieAPI.Application.Repositories.CommentRepository;
+using MeowieAPI.Application.Repositories.MovieRepository;
 using MeowieAPI.Domain.Entities;
 
 namespace MeowieAPI.Application.Features.Commands.MovieCommands.RateMovie
@@ -14,20 +15,27 @@ namespace MeowieAPI.Application.Features.Commands.MovieCommands.RateMovie
     {
         readonly IUserService _userService;
         readonly ICommentWriteRepository _commentWriteRepository;
+        readonly IMovieReadRepository _movieReadRepository;
 
-        public RateMovieCommandHandler(IUserService userService, ICommentWriteRepository commentWriteRepository)
+        public RateMovieCommandHandler(IUserService userService, ICommentWriteRepository commentWriteRepository, IMovieReadRepository movieReadRepository)
         {
             _userService = userService;
             _commentWriteRepository = commentWriteRepository;
+            _movieReadRepository = movieReadRepository;
         }
 
         public async Task<RateMovieCommandResponse> Handle(RateMovieCommandRequest request, CancellationToken cancellationToken)
         {
             
             User user = await _userService.GetUserByUsername(request.Username);
+            Movie movie = await _movieReadRepository.GetByIdAsync(request.MovieId.ToString());
             if(user == null)
             {
                 return new() { Message = "User not found !", Success = false };
+            }
+            else if(movie == null)
+            {
+                return new() { Message = "Movie not found !", Success = false };
             }
             else
             {
@@ -40,6 +48,8 @@ namespace MeowieAPI.Application.Features.Commands.MovieCommands.RateMovie
                     User = user,
                     UserRating = request.Rate,
                 });
+                movie.UserRating = ((movie.UserRating * movie.UserRatingCount) + request.Rate)/(movie.UserRatingCount+1);
+                movie.UserRatingCount += 1;
 
                 if (repositoryResponse)
                 {

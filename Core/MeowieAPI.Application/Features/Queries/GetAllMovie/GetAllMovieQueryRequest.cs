@@ -10,6 +10,8 @@ namespace MeowieAPI.Application.Features.Queries.GetAllMovie
 {
     public class GetAllMovieQueryRequest : IRequest<GetAllMovieQueryResponse>
     {
-        public Pagination Pagination { get; set; } = new() { Page = 0, Size = 20 };
+        public int Page { get; set; } = 0;
+        public int Count { get; set; } = 5;
+        public bool Shuffle { get; set; } = false;
     }
 }

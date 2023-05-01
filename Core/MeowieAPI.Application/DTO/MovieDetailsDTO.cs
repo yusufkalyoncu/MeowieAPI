@@ -22,5 +22,7 @@ namespace MeowieAPI.Application.DTO
         public DirectorDTO Director { get; set; }
         public Guid DirectorId { get; set; }
         public ICollection<ActorDTO> Actors { get; set; }
+        public ICollection<CommentDTO> Comments { get; set; }
+
     }
 }
