@@ -20,6 +20,9 @@ namespace MeowieAPI.Application.Features.Queries.GetAllMovie
 
         public async Task<GetAllMovieQueryResponse> Handle(GetAllMovieQueryRequest request, CancellationToken cancellationToken)
         {
+
+            int totalMovieCount = _movieReadRepository.GetAll().Count();
+
             List<MovieDTO> movies = _movieReadRepository.GetAll().Skip(request.Page * request.Count).Take(request.Count).Select(
                 m => new MovieDTO
                 {
@@ -37,10 +40,10 @@ namespace MeowieAPI.Application.Features.Queries.GetAllMovie
 
             if (request.Shuffle)
             {
-                return new GetAllMovieQueryResponse() { Movies = ShuffleMovies(movies) };
+                return new GetAllMovieQueryResponse() { Movies = ShuffleMovies(movies), TotalMovieCount = totalMovieCount };
             }
 
-            return new GetAllMovieQueryResponse() { Movies = movies };
+            return new GetAllMovieQueryResponse() { Movies = movies , TotalMovieCount = totalMovieCount};
         }
 
         public List<MovieDTO> ShuffleMovies(List<MovieDTO> movies)

@@ -10,5 +10,6 @@ namespace MeowieAPI.Application.Features.Queries.GetAllMovie
     public class GetAllMovieQueryResponse
     {
         public List<MovieDTO> Movies { get; set; }
+        public int TotalMovieCount { get; set; }
     }
 }
