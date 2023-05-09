@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "Jp7hh5snhVxDSy6FEtHprXzMldXzlem9+3iWKGGaQ4Y=",
+  "Hash": "PwuvWBm4DyOTCcgMZMa/Jhct+RHMJ8h5bXLLPWCXIso=",
   "Source": "MeowieAPI.API",
   "BasePath": "_content/MeowieAPI.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "MeowieAPI.API\\wwwroot",
+      "Source": "MeowieAPI.API",
+      "ContentRoot": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Presentation\\MeowieAPI.API\\wwwroot\\",
+      "BasePath": "_content/MeowieAPI.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Presentation\\MeowieAPI.API\\wwwroot\\resource\\profile-pictures\\username.png",
+      "SourceId": "MeowieAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Presentation\\MeowieAPI.API\\wwwroot\\",
+      "BasePath": "_content/MeowieAPI.API",
+      "RelativePath": "resource/profile-pictures/username.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\profile-pictures\\username.png"
+    }
+  ]
 }

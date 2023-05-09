@@ -8,6 +8,7 @@ using MeowieAPI.Infrastructure.enums;
 using MeowieAPI.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpLogging;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using Serilog.Context;
@@ -77,6 +78,8 @@ builder.Services.AddHttpLogging(logging =>
 
 });
 
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -85,6 +88,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "resource")),
+    RequestPath = "/resource"
+});
 //my global exception handler
 app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
 

@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Yusuf\\Desktop\\Projects\\MeowieAPI\\Presentation\\MeowieAPI.API\\wwwroot\\resource\\profile-pictures\\username.png",
+      "PackagePath": "staticwebassets\\resource\\profile-pictures\\username.png"
+    },
+    {
+      "Id": "obj\\Debug\\net70\\staticwebassets\\msbuild.MeowieAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net70\\staticwebassets\\msbuild.build.MeowieAPI.API.props",
+      "PackagePath": "build\\MeowieAPI.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net70\\staticwebassets\\msbuild.buildMultiTargeting.MeowieAPI.API.props",
+      "PackagePath": "buildMultiTargeting\\MeowieAPI.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net70\\staticwebassets\\msbuild.buildTransitive.MeowieAPI.API.props",
+      "PackagePath": "buildTransitive\\MeowieAPI.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

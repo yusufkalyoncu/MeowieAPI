@@ -15,13 +15,15 @@ namespace MeowieAPI.Application.Features.Commands.MovieCommands.RateMovie
     {
         readonly IUserService _userService;
         readonly ICommentWriteRepository _commentWriteRepository;
+        readonly ICommentReadRepository _commentReadRepository;
         readonly IMovieReadRepository _movieReadRepository;
 
-        public RateMovieCommandHandler(IUserService userService, ICommentWriteRepository commentWriteRepository, IMovieReadRepository movieReadRepository)
+        public RateMovieCommandHandler(IUserService userService, ICommentWriteRepository commentWriteRepository, IMovieReadRepository movieReadRepository, ICommentReadRepository commentReadRepository)
         {
             _userService = userService;
             _commentWriteRepository = commentWriteRepository;
             _movieReadRepository = movieReadRepository;
+            _commentReadRepository = commentReadRepository;
         }
 
         public async Task<RateMovieCommandResponse> Handle(RateMovieCommandRequest request, CancellationToken cancellationToken)
@@ -39,35 +41,55 @@ namespace MeowieAPI.Application.Features.Commands.MovieCommands.RateMovie
             }
             else
             {
-                var repositoryResponse = await _commentWriteRepository.AddAsync(new()
-                {
-                    Id = Guid.NewGuid(),
-                    Content = request.Comment,
-                    CreatedDate = DateTime.UtcNow,
-                    MovieId = request.MovieId,
-                    User = user,
-                    UserRating = request.Rate,
-                });
-                movie.UserRating = ((movie.UserRating * movie.UserRatingCount) + request.Rate)/(movie.UserRatingCount+1);
-                movie.UserRatingCount += 1;
+                var userComment = await _commentReadRepository.GetCommentByUserIdAndMovieIdAsync(user.Id, movie.Id);
 
-                if (repositoryResponse)
+                if(userComment == null)
                 {
-                    await _commentWriteRepository.SaveAsync();
-                    return new()
+                    var repositoryResponse = await _commentWriteRepository.AddAsync(new()
                     {
-                        Message = "Successfuly rated",
-                        Success = true
-                    };
+                        Id = Guid.NewGuid(),
+                        Content = request.Comment,
+                        CreatedDate = DateTime.UtcNow,
+                        MovieId = request.MovieId,
+                        User = user,
+                        UserRating = request.Rate,
+                    });
+                    movie.UserRating = ((movie.UserRating * movie.UserRatingCount) + request.Rate) / (movie.UserRatingCount + 1);
+                    movie.UserRatingCount += 1;
+
+                    if (repositoryResponse)
+                    {
+                        await _commentWriteRepository.SaveAsync();
+                        return new()
+                        {
+                            Message = "Successfuly rated",
+                            Success = true
+                        };
+                    }
+                    else
+                    {
+                        return new()
+                        {
+                            Message = "Error when save rating",
+                            Success = false
+                        };
+                    }
                 }
                 else
                 {
+                    movie.UserRating = (((movie.UserRating * movie.UserRatingCount) - userComment.UserRating) + request.Rate) / movie.UserRatingCount; // updated new rating
+                    userComment.UserRating = request.Rate;
+                    userComment.Content = request.Comment;
+                    userComment.CreatedDate = DateTime.UtcNow;
+
+                    await _commentWriteRepository.SaveAsync();
                     return new()
                     {
-                        Message = "Error when save rating",
-                        Success = false
+                        Message = "Successfuly updated",
+                        Success = true
                     };
                 }
+                
             }
 
         }

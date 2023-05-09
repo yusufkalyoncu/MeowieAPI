@@ -9,5 +9,6 @@ namespace MeowieAPI.Application.Repositories.CommentRepository
 {
     public interface ICommentReadRepository : IReadRepository<Comment>
     {
+        Task<Comment> GetCommentByUserIdAndMovieIdAsync(string userId, Guid movieId);
     }
 }
