@@ -24,11 +24,25 @@ namespace MeowieAPI.Application.Features.Commands.UserCommands.LoginUser
 
         public async Task<LoginUserCommandResponse> Handle(LoginUserCommandRequest request, CancellationToken cancellationToken)
         {
-            TokenDTO token = await _authService.LoginAsync(request.UsernameOrEmail, request.Password, 60);
-            return new()
+            try
             {
-                Token = token
-            };
+                TokenDTO token = await _authService.LoginAsync(request.UsernameOrEmail, request.Password, 60 * 5);
+                return new()
+                {
+                    Token = token,
+                    Message = "Login successfully",
+                    Success = true
+                };
+            }
+            catch (Exception e)
+            {
+                return new()
+                {
+                    Token = null,
+                    Message = e.Message,
+                    Success = false
+                };
+            }
 
         }
     }

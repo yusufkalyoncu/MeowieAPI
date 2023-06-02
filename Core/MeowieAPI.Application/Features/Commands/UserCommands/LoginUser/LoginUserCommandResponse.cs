@@ -9,6 +9,8 @@ namespace MeowieAPI.Application.Features.Commands.UserCommands.LoginUser
 {
     public class LoginUserCommandResponse
     {
-        public TokenDTO Token { get; set; }
+        public TokenDTO? Token { get; set; }
+        public bool Success { get; set; }
+        public string? Message { get; set; }
     }
 }

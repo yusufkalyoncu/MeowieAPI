@@ -24,7 +24,8 @@ namespace MeowieAPI.Application.Features.Commands.UserCommands.CreateUser
                 Name = request.Name,
                 Password = request.Password,
                 PasswordConfirm = request.PasswordConfirm,
-                Username = request.Username
+                Username = request.Username,
+                Biography = "Hey welcome to my profile. You can look my lists and comments. You can follow me if you want."
             });
 
             return new()

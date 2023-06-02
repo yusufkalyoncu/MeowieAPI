@@ -11,6 +11,6 @@ namespace MeowieAPI.Application.Abstractions.Services
     {
         Task<TokenDTO> GoogleLoginAsync(string idToken, int lifeTimeSecond);
         Task<TokenDTO> LoginAsync(string usernameOrEmail, string password, int lifeTimeSecond);
-        Task<TokenDTO> RefreshTokenLoginAsync(string refreshToken);
+        Task<TokenDTO> RefreshTokenLoginAsync(string refreshToken, int lifeTimeSecond);
     }
 }

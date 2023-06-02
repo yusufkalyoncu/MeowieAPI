@@ -29,7 +29,7 @@ namespace MeowieAPI.Persistence.Services
                 Name = model.Name,
                 UserName = model.Username,
                 Email = model.Email,
-                ProfileImage = "test"
+                Biography = model.Biography,
             }, model.Password);
             if (result.Succeeded)
             {

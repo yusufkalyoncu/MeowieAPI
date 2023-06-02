@@ -20,7 +20,7 @@ namespace MeowieAPI.Application.Features.Commands.UserCommands.RefreshTokenLogin
 
         public async Task<RefreshTokenLoginCommandResponse> Handle(RefreshTokenLoginCommandRequest request, CancellationToken cancellationToken)
         {
-            TokenDTO token = await _authService.RefreshTokenLoginAsync(request.RefreshToken);
+            TokenDTO token = await _authService.RefreshTokenLoginAsync(request.RefreshToken, 60*5);
             return new()
             {
                 Token = token

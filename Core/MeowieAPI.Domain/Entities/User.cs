@@ -12,6 +12,7 @@ namespace MeowieAPI.Domain.Entities
         public override string UserName { get => base.UserName; set => base.UserName = value; }
         [Required]
         public override string Email { get => base.Email; set => base.Email = value; }
+        public string? Biography { get; set; }
         public string? ProfileImage { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenEndDate { get; set; }

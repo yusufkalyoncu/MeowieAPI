@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using MediatR;
 using MeowieAPI.Application.Exceptions;
 using Microsoft.EntityFrameworkCore;
+using MeowieAPI.Application.DTO.UserDTOs;
 
 namespace MeowieAPI.Persistence.Services
 {
@@ -85,7 +86,9 @@ namespace MeowieAPI.Persistence.Services
                 user = await _userManager.FindByEmailAsync(usernameOrEmail);
 
             if (user == null)
+            {
                 throw new UserNotFoundException();
+            }
 
             SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, password, false);
             if (result.Succeeded)
@@ -100,12 +103,12 @@ namespace MeowieAPI.Persistence.Services
             }
         }
 
-        public async Task<TokenDTO> RefreshTokenLoginAsync(string refreshToken)
+        public async Task<TokenDTO> RefreshTokenLoginAsync(string refreshToken, int lifeTimeSecond)
         {
             User? user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
             if(user != null && user?.RefreshTokenEndDate > DateTime.UtcNow)
             {
-                TokenDTO token = _tokenHandler.CreateAccessToken(15, user);
+                TokenDTO token = _tokenHandler.CreateAccessToken(lifeTimeSecond, user);
                 await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 60);
                 return token;
             }

@@ -5,6 +5,7 @@ using MeowieAPI.Application.Features.Queries.GetAllMovie;
 using MeowieAPI.Application.Features.Queries.GetMovieByGenre;
 using MeowieAPI.Application.Features.Queries.GetRandomMovie;
 using MeowieAPI.Application.Features.Queries.GetSingleMovie;
+using MeowieAPI.Application.Features.Queries.SearchMovie;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -46,6 +47,13 @@ namespace MeowieAPI.API.Controllers
             GetRandomMovieQueryResponse response = await _mediator.Send(getRandomMovieQueryRequest);
             if (response != null) return Ok(response);
             else return NotFound();
+        }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchMovie([FromQuery]SearchMovieQueryRequest searchMovieQueryRequest)
+        {
+            SearchMovieQueryResponse response = await _mediator.Send(searchMovieQueryRequest);
+            return Ok(response);
         }
 
         [HttpPut]

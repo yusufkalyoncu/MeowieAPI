@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using MeowieAPI.Application.Features.Queries.GetSingleComment;
-using Microsoft.AspNetCore.Http;
+using MeowieAPI.Application.Features.Queries.GetUserRating;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeowieAPI.API.Controllers
@@ -20,6 +20,13 @@ namespace MeowieAPI.API.Controllers
         public async Task<IActionResult> GetSingleComment([FromQuery] GetSingleCommentQueryRequest getSingleCommentQueryRequest)
         {
             GetSingleCommentQueryResponse response = await _mediator.Send(getSingleCommentQueryRequest);
+            return Ok(response);
+        }
+
+        [HttpGet("user-ratings")]
+        public async Task<IActionResult> GetUserRatings([FromQuery] GetUserRatingQueryRequest getUserRatingQueryRequest)
+        {
+            GetUserRatingQueryResponse response = await _mediator.Send(getUserRatingQueryRequest);
             return Ok(response);
         }
     }

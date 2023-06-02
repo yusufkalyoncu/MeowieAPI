@@ -22,7 +22,8 @@ namespace MeowieAPI.API.Controllers
         public async Task<IActionResult> Login([FromBody]LoginUserCommandRequest loginUserCommandRequest)
         {
             LoginUserCommandResponse response = await _mediator.Send(loginUserCommandRequest);
-            return Ok(response);
+            if(response.Success) return Ok(response);
+            return NotFound(response);
         }
         [HttpGet("[action]")]
         public async Task<IActionResult> RefreshTokenLogin([FromQuery]RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest)
